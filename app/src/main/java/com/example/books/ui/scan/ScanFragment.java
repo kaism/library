@@ -1,4 +1,4 @@
-package com.example.items.ui.add;
+package com.example.books.ui.scan;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,19 +12,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.items.R;
+import com.example.books.R;
 
-public class AddFragment extends Fragment {
+public class ScanFragment extends Fragment {
 
-	private AddViewModel addViewModel;
+	private ScanViewModel scanViewModel;
 
 	public View onCreateView(@NonNull LayoutInflater inflater,
 							 ViewGroup container, Bundle savedInstanceState) {
-		addViewModel =
-				ViewModelProviders.of(this).get(AddViewModel.class);
-		View root = inflater.inflate(R.layout.fragment_add, container, false);
-		final TextView textView = root.findViewById(R.id.text_add);
-		addViewModel.getText().observe(this, new Observer<String>() {
+		scanViewModel =
+				ViewModelProviders.of(this).get(ScanViewModel.class);
+		View root = inflater.inflate(R.layout.fragment_scan, container, false);
+		final TextView textView = root.findViewById(R.id.text_scan);
+		scanViewModel.getText().observe(this, new Observer<String>() {
 			@Override
 			public void onChanged(@Nullable String s) {
 				textView.setText(s);

@@ -1,16 +1,16 @@
-package com.example.items.ui.add;
+package com.example.books.ui.scan;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class AddViewModel extends ViewModel {
+public class ScanViewModel extends ViewModel {
 
 	private MutableLiveData<String> mText;
 
-	public AddViewModel() {
+	public ScanViewModel() {
 		mText = new MutableLiveData<>();
-		mText.setValue("This is add fragment");
+		mText.setValue("This is scan fragment");
 	}
 
 	public LiveData<String> getText() {

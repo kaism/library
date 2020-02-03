@@ -12,10 +12,10 @@
 		tools:layout="@layout/fragment_list" />
 
 	<fragment
-		android:id="@+id/navigation_add"
-		android:name="com.example.items.ui.add.AddFragment"
-		android:label="@string/title_add"
-		tools:layout="@layout/fragment_add" />
+		android:id="@+id/navigation_scan"
+		android:name="com.example.books.ui.scan.ScanFragment"
+		android:label="@string/title_scan"
+		tools:layout="@layout/fragment_scan" />
 
 	<fragment
 		android:id="@+id/navigation_search"

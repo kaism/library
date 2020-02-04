@@ -1,4 +1,4 @@
-package com.example.items.ui.search;
+package com.example.books.ui.list;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,19 +12,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.items.R;
+import com.example.books.R;
 
-public class SearchFragment extends Fragment {
+public class ListFragment extends Fragment {
 
-	private SearchViewModel searchViewModel;
+	private ListViewModel listViewModel;
 
 	public View onCreateView(@NonNull LayoutInflater inflater,
 							 ViewGroup container, Bundle savedInstanceState) {
-		searchViewModel =
-				ViewModelProviders.of(this).get(SearchViewModel.class);
-		View root = inflater.inflate(R.layout.fragment_search, container, false);
-		final TextView textView = root.findViewById(R.id.text_search);
-		searchViewModel.getText().observe(this, new Observer<String>() {
+		listViewModel =
+				ViewModelProviders.of(this).get(ListViewModel.class);
+		View root = inflater.inflate(R.layout.fragment_list, container, false);
+		final TextView textView = root.findViewById(R.id.text_list);
+		listViewModel.getText().observe(this, new Observer<String>() {
 			@Override
 			public void onChanged(@Nullable String s) {
 				textView.setText(s);

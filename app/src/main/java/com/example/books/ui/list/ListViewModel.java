@@ -1,4 +1,4 @@
-package com.example.items.ui.list;
+package com.example.books.ui.list;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -1,4 +1,4 @@
-package com.example.items.ui.search;
+package com.example.books.ui.search;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

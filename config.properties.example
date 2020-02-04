@@ -1,0 +1,2 @@
+// usage: https://www.googleapis.com/books/v1/volumes?q=ISBN&key=APIKEY
+GOOGLE_API_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"

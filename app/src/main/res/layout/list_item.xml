@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="@dimen/listItem_margin_vertical"
+	android:layout_marginStart="@dimen/listItem_margin_horizontal"
+	android:layout_marginEnd="@dimen/listItem_margin_horizontal">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:padding="4dp">
+
+		<ImageView
+			android:id="@+id/list_item_image"
+			android:layout_height="@dimen/image_listItem_height"
+			android:layout_width="@dimen/image_listItem_width"
+			android:src="@drawable/intro_to_algorithms" />
+
+		<LinearLayout
+			android:id="@+id/list_item_layout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/list_item_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="This is a title"
+				android:fontFamily="sans-serif-condensed-medium"
+				android:textColor="#555555"
+				android:ellipsize="end"
+				android:maxLines="2" />
+
+			<TextView
+				android:id="@+id/list_item_description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="This is the description"
+				android:fontFamily="sans-serif-light"
+				android:ellipsize="end"
+				android:maxLines="4" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

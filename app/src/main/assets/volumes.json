@@ -1,0 +1,939 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 537,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "IfDouSUqOUIC",
+      "etag": "I6+K/RWsRsQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/IfDouSUqOUIC",
+      "volumeInfo": {
+        "title": "Core Techniques and Algorithms in Game Programming",
+        "authors": [
+          "Daniel Sanchez-crespo",
+          "Daniel Sánchez-Crespo Dalmau"
+        ],
+        "publisher": "New Riders",
+        "publishedDate": "2004",
+        "description": "Furnishes a valuable compilation of core techniques and algorithms used to code computer and video games, coverin such topics as code design, data structures, design patters, AI, scripting engines, network programming, 2D programming, 3D pipelines, and texture mapping and furnishing code samples in C++ and Open GL and DirectX APIs. Original. (Advanced)",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0131020099"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780131020092"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 854,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=IfDouSUqOUIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=IfDouSUqOUIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=IfDouSUqOUIC&printsec=frontcover&dq=programming+algorithms&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=IfDouSUqOUIC&dq=programming+algorithms&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Core_Techniques_and_Algorithms_in_Game_P.html?hl=&id=IfDouSUqOUIC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=IfDouSUqOUIC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Furnishes a valuable compilation of core techniques and algorithms used to code computer and video games, coverin such topics as code design, data structures, design patters, AI, scripting engines, network programming, 2D programming, 3D ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "nCdFDwAAQBAJ",
+      "etag": "yJzb3Wha5Pg",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/nCdFDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Guide to Competitive Programming",
+        "subtitle": "Learning and Improving Algorithms Through Contests",
+        "authors": [
+          "Antti Laaksonen"
+        ],
+        "publisher": "Springer",
+        "publishedDate": "2018-01-02",
+        "description": "This invaluable textbook presents a comprehensive introduction to modern competitive programming. The text highlights how competitive programming has proven to be an excellent way to learn algorithms, by encouraging the design of algorithms that actually work, stimulating the improvement of programming and debugging skills, and reinforcing the type of thinking required to solve problems in a competitive setting. The book contains many “folklore” algorithm design tricks that are known by experienced competitive programmers, yet which have previously only been formally discussed in online forums and blog posts. Topics and features: reviews the features of the C++ programming language, and describes how to create efficient algorithms that can quickly process large data sets; discusses sorting algorithms and binary search, and examines a selection of data structures of the C++ standard library; introduces the algorithm design technique of dynamic programming, and investigates elementary graph algorithms; covers such advanced algorithm design topics as bit-parallelism and amortized analysis, and presents a focus on efficiently processing array range queries; surveys specialized algorithms for trees, and discusses the mathematical topics that are relevant in competitive programming; examines advanced graph techniques, geometric algorithms, and string techniques; describes a selection of more advanced topics, including square root algorithms and dynamic programming optimization. This easy-to-follow guide is an ideal reference for all students wishing to learn algorithms, and practice for programming contests. Knowledge of the basics of programming is assumed, but previous background in algorithm design or programming contests is not necessary. Due to the broad range of topics covered at various levels of difficulty, this book is suitable for both beginners and more experienced readers.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9783319725475"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "3319725475"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 283,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=nCdFDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=nCdFDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=nCdFDwAAQBAJ&printsec=frontcover&dq=programming+algorithms&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=nCdFDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=nCdFDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE_AND_RENTAL",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 47.59,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 33.31,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=nCdFDwAAQBAJ&rdid=book-nCdFDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 47590000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 33310000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          },
+          {
+            "finskyOfferType": 3,
+            "listPrice": {
+              "amountInMicros": 16660000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 16660000,
+              "currencyCode": "EUR"
+            },
+            "rentalDuration": {
+              "unit": "DAY",
+              "count": 90
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Guide_to_Competitive_Programming-sample-epub.acsm?id=nCdFDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Guide_to_Competitive_Programming-sample-pdf.acsm?id=nCdFDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=nCdFDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Due to the broad range of topics covered at various levels of difficulty, this book is suitable for both beginners and more experienced readers."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "vZvIzaQbMYwC",
+      "etag": "eJpiBqupamQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/vZvIzaQbMYwC",
+      "volumeInfo": {
+        "title": "Algorithms and Programming",
+        "subtitle": "Problems and Solutions",
+        "authors": [
+          "Alexander Shen"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2011-03-23",
+        "description": "This text is structured in a problem-solution format that requires the student to think through the programming process. New to the second edition are additional chapters on suffix trees, games and strategies, and Huffman coding as well as an Appendix illustrating the ease of conversion from Pascal to C.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781441917485"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1441917489"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 272,
+        "printType": "BOOK",
+        "categories": [
+          "Mathematics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=vZvIzaQbMYwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=vZvIzaQbMYwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=vZvIzaQbMYwC&printsec=frontcover&dq=programming+algorithms&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=vZvIzaQbMYwC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=vZvIzaQbMYwC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE_AND_RENTAL",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 52.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 37.09,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=vZvIzaQbMYwC&rdid=book-vZvIzaQbMYwC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 52990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 37090000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          },
+          {
+            "finskyOfferType": 3,
+            "listPrice": {
+              "amountInMicros": 18550000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 18550000,
+              "currencyCode": "EUR"
+            },
+            "rentalDuration": {
+              "unit": "DAY",
+              "count": 90
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Algorithms_and_Programming-sample-pdf.acsm?id=vZvIzaQbMYwC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=vZvIzaQbMYwC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This text is structured in a problem-solution format that requires the student to think through the programming process."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "cBli0MyTknIC",
+      "etag": "Ekjr1kji24E",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/cBli0MyTknIC",
+      "volumeInfo": {
+        "title": "Stochastic Linear Programming Algorithms",
+        "subtitle": "A Comparison Based on a Model Management System",
+        "authors": [
+          "Janos Mayer"
+        ],
+        "publisher": "CRC Press",
+        "publishedDate": "1998-02-25",
+        "description": "A computationally oriented comparison of solution algorithms for two stage and jointly chance constrained stochastic linear programming problems, this is the first book to present comparative computational results with several major stochastic programming solution approaches. The following methods are considered: regularized decomposition, stochastic decomposition and successive discrete approximation methods for two stage problems; cutting plane methods, and a reduced gradient method for jointly chance constrained problems. The first part of the book introduces the algorithms, including a unified approach to decomposition methods and their regularized counterparts. The second part addresses computer implementation of the methods, describes a testing environment based on a model management system, and presents comparative computational results with the various algorithms. Emphasis is on the computational behavior of the algorithms.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "9056991442"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9789056991449"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 163,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=cBli0MyTknIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=cBli0MyTknIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=cBli0MyTknIC&pg=PA68&dq=programming+algorithms&hl=&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=cBli0MyTknIC&dq=programming+algorithms&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Stochastic_Linear_Programming_Algorithms.html?hl=&id=cBli0MyTknIC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=cBli0MyTknIC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "linear. \u003cb\u003eprogramming\u003c/b\u003e. \u003cb\u003ealgorithms\u003c/b\u003e. This section is devoted to solution approaches \u003cbr\u003e\nin stochastic linear \u003cb\u003eprogramming\u003c/b\u003e. We do not intend to give a complete survey. \u003cbr\u003e\nOur aim is to summarize some of the main approaches with a detailed \u003cbr\u003e\npresentation&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ni1vQgAACAAJ",
+      "etag": "AtMVYqras8Q",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ni1vQgAACAAJ",
+      "volumeInfo": {
+        "title": "Algorithms",
+        "subtitle": "A Functional Programming Approach",
+        "authors": [
+          "Fethi Rabhi",
+          "Guy Lapalme"
+        ],
+        "publisher": "Addison Wesley",
+        "publishedDate": "1999",
+        "description": "A student introduction to the design of algorithms for problem solving. Written from a functional programming perspective, the text should appeal to anyone studying algorithms. Included are end-of-chapter exercises and bibliographic references.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0201596040"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780201596045"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 235,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=ni1vQgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=ni1vQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=ni1vQgAACAAJ&dq=programming+algorithms&hl=&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=ni1vQgAACAAJ&dq=programming+algorithms&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Algorithms.html?hl=&id=ni1vQgAACAAJ"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=ni1vQgAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A student introduction to the design of algorithms for problem solving. Written from a functional programming perspective, the text should appeal to anyone studying algorithms."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "GDf2_Jdy948C",
+      "etag": "uH5k9mf1VAY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/GDf2_Jdy948C",
+      "volumeInfo": {
+        "title": "Optimal Quadratic Programming Algorithms",
+        "subtitle": "With Applications to Variational Inequalities",
+        "authors": [
+          "Zdenek Dostál"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2009-04-03",
+        "description": "Quadratic programming (QP) is one advanced mathematical technique that allows for the optimization of a quadratic function in several variables in the presence of linear constraints. This book presents recently developed algorithms for solving large QP problems and focuses on algorithms which are, in a sense optimal, i.e., they can solve important classes of problems at a cost proportional to the number of unknowns. For each algorithm presented, the book details its classical predecessor, describes its drawbacks, introduces modifications that improve its performance, and demonstrates these improvements through numerical experiments. This self-contained monograph can serve as an introductory text on quadratic programming for graduate students and researchers. Additionally, since the solution of many nonlinear problems can be reduced to the solution of a sequence of QP problems, it can also be used as a convenient introduction to nonlinear programming.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780387848068"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0387848061"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 284,
+        "printType": "BOOK",
+        "categories": [
+          "Mathematics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=GDf2_Jdy948C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=GDf2_Jdy948C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=GDf2_Jdy948C&printsec=frontcover&dq=programming+algorithms&hl=&cd=6&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=GDf2_Jdy948C&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=GDf2_Jdy948C"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE_AND_RENTAL",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 106.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 74.89,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=GDf2_Jdy948C&rdid=book-GDf2_Jdy948C&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 106990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 74890000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          },
+          {
+            "finskyOfferType": 3,
+            "listPrice": {
+              "amountInMicros": 37450000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 37450000,
+              "currencyCode": "EUR"
+            },
+            "rentalDuration": {
+              "unit": "DAY",
+              "count": 90
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Optimal_Quadratic_Programming_Algorithms-sample-pdf.acsm?id=GDf2_Jdy948C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=GDf2_Jdy948C&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book presents recently developed algorithms for solving large QP problems and focuses on algorithms which are, in a sense optimal, i.e., they can solve important classes of problems at a cost proportional to the number of unknowns."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "D22K3Mo1xWMC",
+      "etag": "3mlNz0aguBc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/D22K3Mo1xWMC",
+      "volumeInfo": {
+        "title": "A Concise and Practical Introduction to Programming Algorithms in Java",
+        "authors": [
+          "Frank Nielsen"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2009-04-05",
+        "description": "A Concise and Practical Introduction to Programming Algorithms in Java has two main goals. The first is for novice programmers to learn progressively the basic concepts underlying most imperative programming languages using Java. The second goal is to introduce new programmers to the very basic principles of thinking the algorithmic way and turning the algorithms into programs using the programming concepts of Java. The book is divided into two parts and includes: The fundamental notions of variables, expressions and assignments with type checking - Conditional and loop statements - Explanation of the concepts of functions with pass-by-value arguments and recursion - Fundamental sequential and bisection search techniques - Basic iterative and recursive sorting algorithms. Each chapter of the book concludes with a set of exercises to enable students to practice concepts covered.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1848823398"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781848823396"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 252,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.5.3.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=D22K3Mo1xWMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=D22K3Mo1xWMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=D22K3Mo1xWMC&pg=PA25&dq=programming+algorithms&hl=&cd=7&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=D22K3Mo1xWMC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=D22K3Mo1xWMC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE_AND_RENTAL",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 27.36,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 19.15,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=D22K3Mo1xWMC&rdid=book-D22K3Mo1xWMC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 27360000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 19150000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          },
+          {
+            "finskyOfferType": 3,
+            "listPrice": {
+              "amountInMicros": 9580000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 9580000,
+              "currencyCode": "EUR"
+            },
+            "rentalDuration": {
+              "unit": "DAY",
+              "count": 90
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/A_Concise_and_Practical_Introduction_to-sample-epub.acsm?id=D22K3Mo1xWMC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/A_Concise_and_Practical_Introduction_to-sample-pdf.acsm?id=D22K3Mo1xWMC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=D22K3Mo1xWMC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Once corrected, the \u003cb\u003eprogram\u003c/b\u003e can finally be compiled into an executable bytecode\u003cbr\u003e\n. This toy example emphasizes the incremental strategy for correcting programs. \u003cbr\u003e\nIn general, correcting a \u003cb\u003eprogram\u003c/b\u003e consists of first making it syntactically correct so\u003cbr\u003e\n&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "U7MuQQS-XNsC",
+      "etag": "a4hOWdpKSCM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/U7MuQQS-XNsC",
+      "volumeInfo": {
+        "title": "Genetic Algorithms and Genetic Programming in Computational Finance",
+        "authors": [
+          "Shu-Heng Chen"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2002-07-31",
+        "description": "After a decade of development, genetic algorithms and genetic programming have become a widely accepted toolkit for computational finance. Genetic Algorithms and Genetic Programming in Computational Finance is a pioneering volume devoted entirely to a systematic and comprehensive review of this subject. Chapters cover various areas of computational finance, including financial forecasting, trading strategies development, cash flow management, option pricing, portfolio management, volatility modeling, arbitraging, and agent-based simulations of artificial stock markets. Two tutorial chapters are also included to help readers quickly grasp the essence of these tools. Finally, a menu-driven software program, Simple GP, accompanies the volume, which will enable readers without a strong programming background to gain hands-on experience in dealing with much of the technical material introduced in this work.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0792376013"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780792376019"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 489,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=U7MuQQS-XNsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=U7MuQQS-XNsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=U7MuQQS-XNsC&pg=PR19&dq=programming+algorithms&hl=&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=U7MuQQS-XNsC&dq=programming+algorithms&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Genetic_Algorithms_and_Genetic_Programmi.html?hl=&id=U7MuQQS-XNsC"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Genetic_Algorithms_and_Genetic_Programmi-sample-pdf.acsm?id=U7MuQQS-XNsC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=U7MuQQS-XNsC&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "The applications of genetic \u003cb\u003ealgorithms\u003c/b\u003e and genetic \u003cb\u003eprogramming\u003c/b\u003e to computation \u003cbr\u003e\nfinance have been seen over the last decade in various journal publications, \u003cbr\u003e\nchapters in books, and magazine articles. Their relevance to computational \u003cbr\u003e\nfinance&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "RFF0AgAAQBAJ",
+      "etag": "dfQ8OXpVyiI",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/RFF0AgAAQBAJ",
+      "volumeInfo": {
+        "title": "Game Programming Algorithms and Techniques",
+        "subtitle": "A Platform-Agnostic Approach",
+        "authors": [
+          "Sanjay Madhav"
+        ],
+        "publisher": "Addison-Wesley Professional",
+        "publishedDate": "2013-12-16",
+        "description": "Game Programming Algorithms and Techniques is a detailed overview of many of the important algorithms and techniques used in video game programming today. Designed for programmers who are familiar with object-oriented programming and basic data structures, this book focuses on practical concepts that see actual use in the game industry. Sanjay Madhav takes a unique platform- and framework-agnostic approach that will help develop virtually any game, in any genre, with any language or framework. He presents the fundamental techniques for working with 2D and 3D graphics, physics, artificial intelligence, cameras, and much more. Each concept is illuminated with pseudocode that will be intuitive to any C#, Java, or C++ programmer, and has been refined and proven in Madhav’s game programming courses at the University of Southern California. Review questions after each chapter help solidify the most important concepts before moving on. Madhav concludes with a detailed analysis of two complete games: a 2D iOS side-scroller (written in Objective-Cusing cocos2d) and a 3D PC/Mac/Linux tower defense game (written in C# using XNA/ MonoGame). These games illustrate many of the algorithms and techniques covered in the earlier chapters, and the full source code is available at gamealgorithms.net. Coverage includes Game time management, speed control, and ensuring consistency on diverse hardware Essential 2D graphics techniques for modern mobile gaming Vectors, matrices, and linear algebra for 3D games 3D graphics including coordinate spaces, lighting and shading, z-buffering, and quaternions Handling today’s wide array of digital and analog inputs Sound systems including sound events, 3D audio, and digital signal processing Fundamentals of game physics, including collision detection and numeric integration Cameras: first-person, follow, spline, and more Artificial intelligence: pathfinding, state-based behaviors, and strategy/planning User interfaces including menu systems and heads-up displays Scripting and text-based data files: when, how, and where to use them Basics of networked games including protocols and network topology",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780133463231"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0133463230"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 352,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.4.3.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=RFF0AgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=RFF0AgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=RFF0AgAAQBAJ&pg=PA180&dq=programming+algorithms&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.de/books?id=RFF0AgAAQBAJ&dq=programming+algorithms&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Game_Programming_Algorithms_and_Techniqu.html?hl=&id=RFF0AgAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=RFF0AgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In traditional computer science, much ofthe research on artificial intelligence (AI) \u003cbr\u003e\nhas trended toward increasingly complex forms of AI, including genetic \u003cbr\u003e\n\u003cb\u003ealgorithms\u003c/b\u003e and neural networks. But such complex \u003cb\u003ealgorithms\u003c/b\u003e see limited use in \u003cbr\u003e\ncomputer&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "0a1AAAAAQBAJ",
+      "etag": "PtX6eNdwvBs",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/0a1AAAAAQBAJ",
+      "volumeInfo": {
+        "title": "Concurrent Programming: Algorithms, Principles, and Foundations",
+        "authors": [
+          "Michel Raynal"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2012-12-30",
+        "description": "This book is devoted to the most difficult part of concurrent programming, namely synchronization concepts, techniques and principles when the cooperating entities are asynchronous, communicate through a shared memory, and may experience failures. Synchronization is no longer a set of tricks but, due to research results in recent decades, it relies today on sane scientific foundations as explained in this book. In this book the author explains synchronization and the implementation of concurrent objects, presenting in a uniform and comprehensive way the major theoretical and practical results of the past 30 years. Among the key features of the book are a new look at lock-based synchronization (mutual exclusion, semaphores, monitors, path expressions); an introduction to the atomicity consistency criterion and its properties and a specific chapter on transactional memory; an introduction to mutex-freedom and associated progress conditions such as obstruction-freedom and wait-freedom; a presentation of Lamport's hierarchy of safe, regular and atomic registers and associated wait-free constructions; a description of numerous wait-free constructions of concurrent objects (queues, stacks, weak counters, snapshot objects, renaming objects, etc.); a presentation of the computability power of concurrent objects including the notions of universal construction, consensus number and the associated Herlihy's hierarchy; and a survey of failure detector-based constructions of consensus objects. The book is suitable for advanced undergraduate students and graduate students in computer science or computer engineering, graduate students in mathematics interested in the foundations of process synchronization, and practitioners and engineers who need to produce correct concurrent software. The reader should have a basic knowledge of algorithms and operating systems.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9783642320279"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "3642320279"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 516,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.2.3.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=0a1AAAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=0a1AAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.de/books?id=0a1AAAAAQBAJ&pg=PR3&dq=programming+algorithms&hl=&cd=10&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=0a1AAAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=0a1AAAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "DE",
+        "saleability": "FOR_SALE_AND_RENTAL",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 71.39,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 49.97,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=0a1AAAAAQBAJ&rdid=book-0a1AAAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 71390000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 49970000,
+              "currencyCode": "EUR"
+            },
+            "giftable": true
+          },
+          {
+            "finskyOfferType": 3,
+            "listPrice": {
+              "amountInMicros": 24990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 24990000,
+              "currencyCode": "EUR"
+            },
+            "rentalDuration": {
+              "unit": "DAY",
+              "count": 90
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "DE",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Concurrent_Programming_Algorithms_Princi-sample-epub.acsm?id=0a1AAAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.de/books/download/Concurrent_Programming_Algorithms_Princi-sample-pdf.acsm?id=0a1AAAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=0a1AAAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Michel Raynal C0ncurrent Programming: Algerithrns, Principlfis, and \u003cbr\u003e\nFOundatiOns Q Springer Michel Raynal Institut Universitaire de France IRISA-\u003cbr\u003e\nISTIC Université de Rennes Concurrent \u003cb\u003eProgramming\u003c/b\u003e: \u003cb\u003eAlgorithms\u003c/b\u003e, Principles, \u003cbr\u003e\nand&nbsp;..."
+      }
+    }
+  ]
+}

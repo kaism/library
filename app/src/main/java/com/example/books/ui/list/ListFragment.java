@@ -2,7 +2,6 @@ package com.example.books.ui.list;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.books.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,12 +29,23 @@ public class ListFragment extends Fragment {
 	private RecyclerView recyclerView;
 	private RecyclerView.Adapter adapter;
 	private List<ListItem> listItems;
+	private FloatingActionButton fab;
 
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_list, parent, false);
+	 	fab = getActivity().findViewById(R.id.fab);
 		recyclerView = view.findViewById(R.id.recycler_view);
 		recyclerView.setLayoutManager(new LinearLayoutManager(context));
+		recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+			@Override
+			public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+				if (dy > 0)
+					fab.hide();
+				else if (dy < 0)
+					fab.show();
+			}
+		});
 		listItems = new ArrayList<>();
 		loadRecyclerViewData();
 		return view;
@@ -51,7 +62,7 @@ public class ListFragment extends Fragment {
 			JSONObject o = new JSONObject(loadJSONFromAsset());
 			JSONArray items = o.getJSONArray("items");
 
-			for (int i = 0; i<items.length(); i++) {
+			for (int i = 0; i < items.length(); i++) {
 				JSONObject item = items.getJSONObject(i);
 				JSONObject volumeInfo = item.getJSONObject("volumeInfo");
 				JSONObject imageLinks = volumeInfo.getJSONObject("imageLinks");

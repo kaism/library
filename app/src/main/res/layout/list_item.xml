@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:layout_marginTop="@dimen/listItem_margin_vertical"
 	android:layout_marginStart="@dimen/listItem_margin_horizontal"
+	android:layout_marginTop="@dimen/listItem_margin_vertical"
 	android:layout_marginEnd="@dimen/listItem_margin_horizontal">
 
 	<LinearLayout
@@ -16,8 +15,8 @@
 
 		<ImageView
 			android:id="@+id/list_item_image"
-			android:layout_height="@dimen/image_listItem_height"
 			android:layout_width="@dimen/image_listItem_width"
+			android:layout_height="@dimen/image_listItem_height"
 			android:src="@drawable/intro_to_algorithms" />
 
 		<LinearLayout
@@ -30,20 +29,20 @@
 				android:id="@+id/list_item_title"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:text="This is a title"
-				android:fontFamily="sans-serif-condensed-medium"
-				android:textColor="#555555"
 				android:ellipsize="end"
-				android:maxLines="2" />
+				android:fontFamily="sans-serif-condensed-medium"
+				android:maxLines="2"
+				android:text="This is a title"
+				android:textColor="#555555" />
 
 			<TextView
 				android:id="@+id/list_item_description"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:text="This is the description"
-				android:fontFamily="sans-serif-light"
 				android:ellipsize="end"
-				android:maxLines="4" />
+				android:fontFamily="sans-serif-light"
+				android:maxLines="4"
+				android:text="This is the description" />
 
 		</LinearLayout>
 

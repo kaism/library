@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,9 +39,17 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 		final ListItem listItem = listItems.get(position);
 		holder.titleView.setText(listItem.getTitle());
 		holder.descriptionView.setText(listItem.getDescription());
+
 		Picasso.get()
 			.load(listItem.getImageUrl())
 			.into(holder.imageView);
+
+		holder.layout.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(context, "You clicked "+listItem.getTitle(), Toast.LENGTH_LONG).show();
+			}
+		});
 	}
 
 	@Override
@@ -52,7 +61,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 		LinearLayout layout;
 		TextView titleView;
 		TextView descriptionView;
-		public ImageView imageView;
+		ImageView imageView;
 
 		ViewHolder(@NonNull View itemView) {
 			super(itemView);

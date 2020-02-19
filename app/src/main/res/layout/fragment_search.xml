@@ -3,7 +3,8 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:orientation="vertical">
+	android:orientation="vertical"
+	xmlns:tools="http://schemas.android.com/tools">
 
 	<androidx.appcompat.widget.SearchView
 		android:id="@+id/search"
@@ -14,5 +15,13 @@
 		app:iconifiedByDefault="false"
 		app:queryHint="e.g. Code Complete"
 		android:background="@drawable/search_bar" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recycler_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingBottom="@dimen/listItem_margin_vertical"
+		android:clipToPadding="false"
+		tools:listitem="@layout/list_item" />
 
 </LinearLayout>

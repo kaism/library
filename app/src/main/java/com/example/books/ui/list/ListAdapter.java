@@ -1,6 +1,7 @@
 package com.example.books.ui.list;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.books.DetailActivity;
 import com.example.books.R;
 import com.squareup.picasso.Picasso;
 
@@ -106,7 +108,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 		@Override
 		public void onClick(View v) {
 			ListItem currentItem = listItems.get(getAdapterPosition());
-			Toast.makeText(context, "You clicked " + currentItem.getTitle(), Toast.LENGTH_LONG).show();
+			Intent detailIntent = new Intent(context, DetailActivity.class);
+			detailIntent.putExtra("title", currentItem.getTitle());
+			detailIntent.putExtra("image", currentItem.getImageUrl());
+			detailIntent.putExtra("description", currentItem.getDescription());
+			context.startActivity(detailIntent);
 		}
 
 		/**

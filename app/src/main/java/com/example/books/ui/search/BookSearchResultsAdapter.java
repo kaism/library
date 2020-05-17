@@ -13,42 +13,62 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.books.R;
 import com.example.books.api.Item;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class BookSearchResultsAdapter extends RecyclerView.Adapter<BookSearchResultsAdapter.MyViewHolder> {
-	private List<Item> items;
-	private Context context;
+	private List<Item> mItems;
 
-	public BookSearchResultsAdapter(List<Item> items, Context context) {
-		this.items = items;
-		this.context = context;
+	public BookSearchResultsAdapter(List<Item> items) {
+		mItems = items;
 	}
 
 	@NonNull
 	@Override
-	public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-		View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
-		return new MyViewHolder(view);
+	public BookSearchResultsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+		try {
+			Context context = parent.getContext();
+			LayoutInflater inflater = LayoutInflater.from(context);
+			View view = inflater.inflate(R.layout.search_item_layout, parent, false);
+			return new MyViewHolder(view);
+		} catch (Exception e) {
+			Log.d("KDBUG", "onCreateViewHolder: "+e.getMessage());
+
+			Context context = parent.getContext();
+			LayoutInflater inflater = LayoutInflater.from(context);
+			View view = inflater.inflate(R.layout.list_item, parent, false);
+			return new MyViewHolder(view);
+		}
 	}
 
 	@Override
 	public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
-		Item item = items.get(position);
+		Item item = mItems.get(position);
 		holder.titleView.setText(item.getTitle());
 		holder.descriptionView.setText(item.getDescription());
-		String imgUrl = item.getImageUrl();
-		Log.d("KDEBUG", "onBindViewHolder: "+imgUrl);
 
+		// image
 		holder.imageView.setClipToOutline(true);
-		Picasso.get()
-				.load(imgUrl)
-				.into(holder.imageView);
+		try {
+			Picasso.get()
+					.load(item.getImageUrl())
+					.into(holder.imageView, new Callback() {
+						@Override
+						public void onSuccess() {  }
+						@Override
+						public void onError(Exception e) {
+							holder.imageView.setImageResource(R.drawable.ic_no_image);
+						}
+					});
+		} catch (Exception e) {
+			Log.d("KDBUG", "onBindViewHolder: e caught");
+		}
 	}
 
 	@Override
-	public int getItemCount() { return items.size(); }
+	public int getItemCount() { return mItems.size(); }
 
 	static class MyViewHolder extends RecyclerView.ViewHolder {
 		TextView titleView;
@@ -57,14 +77,10 @@ public class BookSearchResultsAdapter extends RecyclerView.Adapter<BookSearchRes
 
 		MyViewHolder(@NonNull View itemView) {
 			super(itemView);
-			titleView = itemView.findViewById(R.id.list_item_title);
-			descriptionView = itemView.findViewById(R.id.list_item_description);
-			imageView = itemView.findViewById(R.id.list_item_image);
+			titleView = itemView.findViewById(R.id.productName);
+			descriptionView = itemView.findViewById(R.id.productText);
+			imageView = itemView.findViewById(R.id.productImage);
 		}
 	}
 
-	public void addItems(List<Item> items) {
-		this.items.addAll(items);
-		notifyDataSetChanged();
-	}
 }

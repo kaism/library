@@ -2,11 +2,10 @@ package com.example.books.ui.search;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
+import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -21,8 +20,13 @@ import com.example.books.api.ApiClient;
 import com.example.books.api.ApiInterface;
 import com.example.books.api.Item;
 import com.example.books.api.SearchResponse;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,18 +34,19 @@ import retrofit2.Response;
 
 //TODO: implement search in the app bar per material rec
 public class SearchFragment extends Fragment {
-	private String languageCode = "en";
-	private String query = "Android";
-	private int startIndex = 0;
-	private int maxResults = 10;
+	private int startIndex = 0;		// paging index
+	private int maxResults = 20;	// how many results per page
 
 	private Context context;
 	private SearchView searchView;
-	private RecyclerView recyclerView;
-	private ProgressBar progressBar;
-
+	private FloatingActionButton fab;
 	private ApiInterface apiInterface;
+	private RecyclerView recyclerView;
+	private EndlessRecyclerViewScrollListener scrollListener;
 	private BookSearchResultsAdapter adapter;
+
+	private List<Item> items;
+	private String query;
 
 	@Override
 	public void onAttach(@NonNull Context context) {
@@ -49,56 +54,21 @@ public class SearchFragment extends Fragment {
 		this.context = context;
 	}
 
+	@Nullable @Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		setRetainInstance(true);
 		View view = inflater.inflate(R.layout.fragment_search, container, false);
-		searchView = view.findViewById(R.id.search_view);
-		recyclerView = view.findViewById(R.id.recycler_view);
-		progressBar = view.findViewById(R.id.progress_bar);
 
-		recyclerView.setLayoutManager(new LinearLayoutManager(context));
-		progressBar.setVisibility(View.VISIBLE);
-
-		apiInterface = ApiClient.getClient().create(ApiInterface.class);
-		Call<SearchResponse> call = apiInterface.getResponse(languageCode, query, startIndex, maxResults);
-		call.enqueue(new Callback<SearchResponse>() {
-			@Override
-			public void onResponse(@NonNull Call<SearchResponse> call, @NonNull Response<SearchResponse> response) {
-				Log.d("KDEBUG", "onResponse: received");
-				List<Item> items = null;
-				SearchResponse body = response.body();
-				if (body != null) {
-					items = body.getItems();
-					adapter = new BookSearchResultsAdapter(items, context);
-					recyclerView.setAdapter(adapter);
-					Toast.makeText(context, "Page loaded.", Toast.LENGTH_SHORT).show();
-				} else {
-					Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
-				}
-				progressBar.setVisibility(View.GONE);
-			}
-
-			@Override
-			public void onFailure(@NonNull Call<SearchResponse> call, @NonNull Throwable t) {
-				String err = "callback failure: " + t.getMessage();
-				Log.d("KDEBUG", "onFailure: "+err);
-				Toast.makeText(context, err, Toast.LENGTH_LONG).show();
-				progressBar.setVisibility(View.GONE);
-			}
-		});
-
-		return view;
-	}
-
-	@Override
-	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-		super.onViewCreated(view, savedInstanceState);
-
+		// configure search view
+		searchView = view.findViewById(R.id.search_input);
 		searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
 			@Override
-			public boolean onQueryTextSubmit(String query) {
-				Toast.makeText(context, "Searching for " + query, Toast.LENGTH_LONG).show();
-				return false;
+			public boolean onQueryTextSubmit(String q) {
+				query = q;
+				searchView.clearFocus();
+				performSearch();
+				return true;
 			}
 
 			@Override
@@ -107,8 +77,115 @@ public class SearchFragment extends Fragment {
 			}
 		});
 
+		// configure api
+		apiInterface = ApiClient.getClient().create(ApiInterface.class);
+
+		// configure recycler view
+		recyclerView = view.findViewById(R.id.recyclerView);
+		LinearLayoutManager layoutManager = new LinearLayoutManager(context);
+		recyclerView.setLayoutManager(layoutManager);
+		recyclerView.setHasFixedSize(true);
+
+		fab = getActivity().findViewById(R.id.fab);
+		recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+			@Override
+			public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+				if (dy > 0)
+					fab.hide();
+				else if (dy < 0)
+					fab.show();
+			}
+		});
+
+//		// add scroll listener
+//		scrollListener = new EndlessRecyclerViewScrollListener(layoutManager) {
+//			@Override
+//			public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+//				Toast.makeText(context, "Scrolled...page "+page, Toast.LENGTH_LONG).show();
+//				loadMoreData(page);
+//			}
+//		};
+//		recyclerView.addOnScrollListener(scrollListener);
+
+		return view;
 	}
 
+	@Override
+	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+	}
 
+	// query is member variable
+	// startIndex is member variable
+	// countryCode and languageCode should also be member variable --> should this be a searchObject?
+	private void performSearch() {
+		// get user phone settings
+		String countryCode = getUserCountry(context);
+		String languageCode = Locale.getDefault().getLanguage().toUpperCase(Locale.ENGLISH);
+
+		// url encode query to handle spaces and other chars
+		try {
+			query = URLEncoder.encode(query, "utf-8");
+			loadNextDataFromApi(query, languageCode, startIndex);
+			Toast.makeText(context, "Searching for \'"+query+"\' with param "+languageCode+" [ignored: "+countryCode+"]", Toast.LENGTH_LONG).show();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void loadNextDataFromApi(String query, String languageCode, int page) {
+		Toast.makeText(context, "Loading page: " + page, Toast.LENGTH_SHORT).show();
+
+		startIndex = page * maxResults;
+
+		Call<SearchResponse> call = apiInterface.getResponse(query, languageCode, startIndex, maxResults);
+		call.enqueue(new Callback<SearchResponse>() {
+
+			@Override
+			public void onResponse(@NonNull Call<SearchResponse> call, @NonNull Response<SearchResponse> response) {
+				List<Item> nItems = Objects.requireNonNull(response.body()).getItems();
+				if (nItems != null) {
+					if (adapter == null) {
+						items = nItems;
+						adapter = new BookSearchResultsAdapter(nItems);
+						recyclerView.setAdapter(adapter);
+					} else {
+						items.addAll(nItems);
+						adapter.notifyDataSetChanged();
+					}
+				}
+				Toast.makeText(context, "Loaded", Toast.LENGTH_SHORT).show();
+			}
+
+			@Override
+			public void onFailure(@NonNull Call<SearchResponse> call, @NonNull Throwable t) {
+				Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+			}
+		});
+	}
+
+	/**
+	 * Get ISO 3166-1 alpha-2 country code for this device
+	 * Tries to use TelephonyManager to get country from SIM or network.
+	 * If unavailable, returns locale from language setting.
+	 *
+	 * @param context Context reference to get the TelephonyManager instance from
+	 * @return String country code
+	 */
+	private String getUserCountry(Context context) {
+		TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		if (tm != null) {
+			String simCountry = tm.getSimCountryIso();
+			if (simCountry != null && simCountry.length() == 2) { // SIM country code is available
+				return simCountry.toUpperCase(Locale.ENGLISH);
+			} else if (tm.getPhoneType() != TelephonyManager.PHONE_TYPE_CDMA) { // device is not 3G (would be unreliable)
+				String networkCountry = tm.getNetworkCountryIso();
+				if (networkCountry != null && networkCountry.length() == 2) { // network country code is available
+					return networkCountry.toUpperCase(Locale.ENGLISH);
+				}
+			}
+		}
+		return Locale.getDefault().getCountry(); // default to locale from language setting
+	}
 
 }

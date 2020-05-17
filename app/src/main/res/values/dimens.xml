@@ -6,4 +6,6 @@
 	<dimen name="listItem_margin_vertical">8dp</dimen>
 	<dimen name="image_listItem_width">96dp</dimen>
 	<dimen name="image_listItem_height">96dp</dimen>
+	<dimen name="clickable_row_height">56</dimen>
+	<dimen name="search_result_image_padding">8</dimen>
 </resources>

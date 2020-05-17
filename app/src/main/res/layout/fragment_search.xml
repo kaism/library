@@ -2,29 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical"
-	xmlns:tools="http://schemas.android.com/tools">
+	android:orientation="vertical">
 
 	<SearchView
-		android:id="@+id/search_view"
+		android:id="@+id/search_input"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:queryHint="e.g. Code Complete"
-		android:iconifiedByDefault="false" />
+		android:iconifiedByDefault="false"
+		android:queryHint="@string/input_hint_search" />
 
 	<androidx.recyclerview.widget.RecyclerView
-		android:id="@+id/recycler_view"
+		android:id="@+id/recyclerView"
 		android:layout_width="match_parent"
-		android:paddingBottom="@dimen/listItem_margin_vertical"
-		android:clipToPadding="false"
-		android:layout_height="wrap_content"
-		tools:listitem="@layout/list_item" />
-
-	<ProgressBar
-		android:id="@+id/progress_bar"
-		android:layout_width="48dp"
-		android:layout_height="48dp"
-		android:layout_gravity="center"
-		android:visibility="gone" />
+		android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -17,10 +17,22 @@ class VolumeInfo {
 
 	String getTitle() { return title; }
 	String getDescription() { return description; }
-	String getImageUrl() { return imageLinks.getImageUrl(); }
+	String getImageUrl() {
+		try {
+			return imageLinks.getImageUrl();
+		} catch (NullPointerException e) {
+			return null;
+		}
+	}
 }
 
 class ImageLinks {
 	@SerializedName("smallThumbnail") private String smallThumbnail;
-	String getImageUrl() { return smallThumbnail.replace("http://","https://"); }
+	String getImageUrl() {
+		try {
+			return smallThumbnail.replace("http://", "https://");
+		} catch (NullPointerException e) {
+			return null;
+		}
+	}
 }

@@ -13,11 +13,18 @@
 		android:orientation="horizontal"
 		android:padding="4dp">
 
-		<ImageView
-			android:id="@+id/list_item_image"
-			android:layout_width="@dimen/image_listItem_width"
-			android:layout_height="@dimen/image_listItem_height"
-			android:src="@drawable/intro_to_algorithms" />
+		<FrameLayout
+			android:layout_width="64dp"
+			android:layout_height="wrap_content">
+
+			<ImageView
+				android:id="@+id/list_item_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center|center_vertical"
+				android:scaleType="fitXY" />
+
+		</FrameLayout>
 
 		<LinearLayout
 			android:layout_width="wrap_content"

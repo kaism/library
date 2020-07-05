@@ -1,4 +1,4 @@
-package com.example.books.ui.scan;
+package com.kaism.books.ui.scan;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,7 @@ import android.view.MenuItem;
 
 import androidx.core.app.NavUtils;
 
-import com.example.books.R;
+import com.kaism.books.R;
 
 public class ScanActivity extends AppCompatActivity {
 	final Handler handler = new Handler();

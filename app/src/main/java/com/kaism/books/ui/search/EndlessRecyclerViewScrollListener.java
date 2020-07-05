@@ -1,4 +1,4 @@
-package com.example.books.ui.search;
+package com.kaism.books.ui.search;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;

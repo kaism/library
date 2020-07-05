@@ -1,4 +1,4 @@
-package com.example.books;
+package com.kaism.books;
 
 import org.junit.Test;
 

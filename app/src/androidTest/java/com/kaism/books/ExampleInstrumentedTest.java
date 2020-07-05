@@ -1,4 +1,4 @@
-package com.example.books;
+package com.kaism.books;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
 		// Context of the app under test.
 		Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-		assertEquals("com.example.books", appContext.getPackageName());
+		assertEquals("com.kaism.books", appContext.getPackageName());
 	}
 }

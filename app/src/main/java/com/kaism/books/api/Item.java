@@ -1,4 +1,4 @@
-package com.example.books.api;
+package com.kaism.books.api;
 
 import com.google.gson.annotations.SerializedName;
 

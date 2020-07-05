@@ -1,11 +1,11 @@
-package com.example.books;
+package com.kaism.books;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.books.ui.scan.ScanActivity;
+import com.kaism.books.ui.scan.ScanActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 

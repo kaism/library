@@ -1,6 +1,6 @@
-package com.example.books.api;
+package com.kaism.books.api;
 
-import com.example.books.BuildConfig;
+import com.kaism.books.BuildConfig;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

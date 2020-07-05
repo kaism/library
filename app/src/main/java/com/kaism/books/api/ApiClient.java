@@ -1,4 +1,4 @@
-package com.example.books.api;
+package com.kaism.books.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

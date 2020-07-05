@@ -1,4 +1,4 @@
-package com.example.books.ui.list;
+package com.kaism.books.ui.list;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,13 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.books.DetailActivity;
-import com.example.books.R;
+import com.kaism.books.DetailActivity;
+import com.kaism.books.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

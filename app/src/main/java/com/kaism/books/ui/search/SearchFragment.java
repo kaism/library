@@ -1,4 +1,4 @@
-package com.example.books.ui.search;
+package com.kaism.books.ui.search;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,12 +16,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.books.BuildConfig;
-import com.example.books.R;
-import com.example.books.api.ApiClient;
-import com.example.books.api.ApiInterface;
-import com.example.books.api.Item;
-import com.example.books.api.SearchResponse;
+import com.kaism.books.BuildConfig;
+import com.kaism.books.R;
+import com.kaism.books.api.ApiClient;
+import com.kaism.books.api.ApiInterface;
+import com.kaism.books.api.Item;
+import com.kaism.books.api.SearchResponse;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.UnsupportedEncodingException;

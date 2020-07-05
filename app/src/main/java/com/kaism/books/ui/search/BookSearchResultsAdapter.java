@@ -1,4 +1,4 @@
-package com.example.books.ui.search;
+package com.kaism.books.ui.search;
 
 import android.content.Context;
 import android.util.Log;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.books.R;
-import com.example.books.api.Item;
+import com.kaism.books.R;
+import com.kaism.books.api.Item;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 

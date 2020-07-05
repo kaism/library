@@ -1,4 +1,4 @@
-package com.example.books.ui.list;
+package com.kaism.books.ui.list;
 
 public class ListItem {
 	private String title;

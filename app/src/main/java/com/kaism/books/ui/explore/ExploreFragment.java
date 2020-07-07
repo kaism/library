@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -116,6 +117,12 @@ public class ExploreFragment extends Fragment {
 	@Override
 	public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 		super.onViewCreated(view, savedInstanceState);
+
+		// get focus to search input & activate keyboard
+		searchView.requestFocus();
+		InputMethodManager imm = (InputMethodManager) requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+		Objects.requireNonNull(imm).showSoftInput(searchView, InputMethodManager.SHOW_IMPLICIT);
+
 	}
 
 	// query is member variable

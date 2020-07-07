@@ -129,8 +129,12 @@ public class ExploreFragment extends Fragment {
 	// startIndex is member variable
 	// countryCode and languageCode should also be member variable --> should this be a searchObject?
 	private void performSearch() {
-		// clear old results
-		scrollListener.resetState();
+
+		if (adapter != null) {
+			startIndex = 0;
+			adapter.clear();
+			scrollListener.resetState();
+		}
 
 		// get user phone settings
 		String countryCode = getUserCountry(context);

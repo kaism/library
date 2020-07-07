@@ -70,6 +70,12 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdap
 	@Override
 	public int getItemCount() { return mItems.size(); }
 
+	public void clear() {
+		int size = mItems.size();
+		mItems.clear();
+		notifyItemRangeRemoved(0, size);
+	}
+
 	static class MyViewHolder extends RecyclerView.ViewHolder {
 		TextView titleView;
 		TextView descriptionView;

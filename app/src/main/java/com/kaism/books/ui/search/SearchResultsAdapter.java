@@ -18,16 +18,16 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class BookSearchResultsAdapter extends RecyclerView.Adapter<BookSearchResultsAdapter.MyViewHolder> {
+public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdapter.MyViewHolder> {
 	private List<Item> mItems;
 
-	public BookSearchResultsAdapter(List<Item> items) {
+	public SearchResultsAdapter(List<Item> items) {
 		mItems = items;
 	}
 
 	@NonNull
 	@Override
-	public BookSearchResultsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+	public SearchResultsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 		try {
 			Context context = parent.getContext();
 			LayoutInflater inflater = LayoutInflater.from(context);

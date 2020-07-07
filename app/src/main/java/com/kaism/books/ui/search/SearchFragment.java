@@ -45,7 +45,7 @@ public class SearchFragment extends Fragment {
 	private ApiInterface apiInterface;
 	private RecyclerView recyclerView;
 	private EndlessRecyclerViewScrollListener scrollListener;
-	private BookSearchResultsAdapter adapter;
+	private SearchResultsAdapter adapter;
 
 	private List<Item> items;
 	private String query;
@@ -154,7 +154,7 @@ public class SearchFragment extends Fragment {
 				if (nItems != null) {
 					if (adapter == null) {
 						items = nItems;
-						adapter = new BookSearchResultsAdapter(nItems);
+						adapter = new SearchResultsAdapter(nItems);
 						recyclerView.setAdapter(adapter);
 					} else {
 						items.addAll(nItems);

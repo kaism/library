@@ -1,4 +1,4 @@
-package com.kaism.books.ui.search;
+package com.kaism.books.ui.explore;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -35,7 +35,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 //TODO: implement search in the app bar per material rec
-public class SearchFragment extends Fragment {
+public class ExploreFragment extends Fragment {
 	private int startIndex = 0;		// paging index
 	private int maxResults = 20;	// how many results per page
 
@@ -60,7 +60,7 @@ public class SearchFragment extends Fragment {
 	@Nullable @Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		setRetainInstance(true);
-		View view = inflater.inflate(R.layout.fragment_search, container, false);
+		View view = inflater.inflate(R.layout.fragment_explore, container, false);
 
 		// configure search view
 		searchView = view.findViewById(R.id.search_input);

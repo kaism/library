@@ -12,9 +12,9 @@
 		tools:layout="@layout/fragment_list" />
 
 	<fragment
-		android:id="@+id/navigation_search"
-		android:name="com.kaism.books.ui.search.SearchFragment"
-		android:label="@string/title_search"
-		tools:layout="@layout/fragment_search" />
+		android:id="@+id/navigation_explore"
+		android:name="com.kaism.books.ui.explore.ExploreFragment"
+		android:label="@string/title_explore"
+		tools:layout="@layout/fragment_explore" />
 
 </navigation>

@@ -11,8 +11,8 @@
 		android:title="@string/title_scan" />
 
 	<item
-		android:id="@+id/navigation_search"
+		android:id="@+id/navigation_explore"
 		android:icon="@drawable/ic_bottom_nav_search"
-		android:title="@string/title_search" />
+		android:title="@string/title_explore" />
 
 </menu>

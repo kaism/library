@@ -1,4 +1,4 @@
-package com.kaism.books.ui.search;
+package com.kaism.books.ui.explore;
 
 import android.content.Context;
 import android.util.Log;
@@ -31,7 +31,7 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdap
 		try {
 			Context context = parent.getContext();
 			LayoutInflater inflater = LayoutInflater.from(context);
-			View view = inflater.inflate(R.layout.search_item_layout, parent, false);
+			View view = inflater.inflate(R.layout.search_item, parent, false);
 			return new MyViewHolder(view);
 		} catch (Exception e) {
 			Log.d("KDBUG", "onCreateViewHolder: "+e.getMessage());

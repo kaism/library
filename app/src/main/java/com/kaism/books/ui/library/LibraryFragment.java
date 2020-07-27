@@ -1,4 +1,4 @@
-package com.kaism.books.ui.list;
+package com.kaism.books.ui.library;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -23,17 +23,17 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListFragment extends Fragment {
+public class LibraryFragment extends Fragment {
 
 	private Context context;
 	private RecyclerView recyclerView;
 	private RecyclerView.Adapter adapter;
-	private List<ListItem> listItems;
+	private List<LibraryItem> listItems;
 	private FloatingActionButton fab;
 
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_list, parent, false);
+		View view = inflater.inflate(R.layout.fragment_library, parent, false);
 	 	fab = getActivity().findViewById(R.id.fab);
 		recyclerView = view.findViewById(R.id.recycler_view);
 		recyclerView.setLayoutManager(new LinearLayoutManager(context));
@@ -71,10 +71,10 @@ public class ListFragment extends Fragment {
 				String description = volumeInfo.getString("description");
 				String imageUrl = imageLinks.getString("smallThumbnail");
 
-				ListItem book = new ListItem(title, description, imageUrl);
+				LibraryItem book = new LibraryItem(title, description, imageUrl);
 				listItems.add(book);
 			}
-			adapter = new ListAdapter(listItems, context);
+			adapter = new LibraryAdapter(listItems, context);
 			recyclerView.setAdapter(adapter);
 		} catch (JSONException e) {
 			e.printStackTrace();

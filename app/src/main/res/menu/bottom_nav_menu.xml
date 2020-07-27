@@ -3,8 +3,8 @@
 
 	<item
 		android:id="@+id/navigation_list"
-		android:icon="@drawable/ic_bottom_nav_list"
-		android:title="@string/title_list" />
+		android:icon="@drawable/ic_library"
+		android:title="@string/title_library" />
 
 	<item
 		android:id="@+id/navigation_scan"

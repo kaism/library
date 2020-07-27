@@ -43,6 +43,6 @@
 		android:layout_height="wrap_content"
 		app:layout_anchor="@id/bottom_bar"
 		app:layout_anchorGravity="center|bottom"
-		app:srcCompat="@drawable/ic_bottom_nav_scan" />
+		app:srcCompat="@drawable/ic_scan" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -5,6 +5,6 @@
 	<string name="title_explore">Explore</string>
 
 	<string name="title_activity_scan">ScanActivity</string>
-	<string name="title_activity_detail">DetailActivity</string>
+	<string name="title_activity_detail">Book Details</string>
 	<string name="input_hint_search">e.g. Harry Potter</string>
 </resources>

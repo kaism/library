@@ -34,8 +34,8 @@
 
 				<ImageView
 					android:id="@+id/list_item_image_detail"
-					android:layout_width="@dimen/image_listItem_width"
-					android:layout_height="@dimen/image_listItem_height"
+					android:layout_width="@dimen/listItem_image_width"
+					android:layout_height="@dimen/listItem_image_height"
 					android:src="@drawable/intro_to_algorithms" />
 
 				<TextView

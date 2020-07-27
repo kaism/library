@@ -1,4 +1,4 @@
-package com.kaism.books.ui.search;
+package com.kaism.books.ui.explore;
 
 import android.content.Context;
 import android.util.Log;
@@ -18,20 +18,20 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class BookSearchResultsAdapter extends RecyclerView.Adapter<BookSearchResultsAdapter.MyViewHolder> {
+public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdapter.MyViewHolder> {
 	private List<Item> mItems;
 
-	public BookSearchResultsAdapter(List<Item> items) {
+	public SearchResultsAdapter(List<Item> items) {
 		mItems = items;
 	}
 
 	@NonNull
 	@Override
-	public BookSearchResultsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+	public SearchResultsAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 		try {
 			Context context = parent.getContext();
 			LayoutInflater inflater = LayoutInflater.from(context);
-			View view = inflater.inflate(R.layout.search_item_layout, parent, false);
+			View view = inflater.inflate(R.layout.search_item, parent, false);
 			return new MyViewHolder(view);
 		} catch (Exception e) {
 			Log.d("KDBUG", "onCreateViewHolder: "+e.getMessage());

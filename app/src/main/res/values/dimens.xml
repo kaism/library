@@ -1,11 +1,12 @@
 <resources>
 	<dimen name="activity_horizontal_margin">16dp</dimen>
 	<dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="clickable">56dp</dimen>
 
 	<dimen name="listItem_margin_horizontal">8dp</dimen>
 	<dimen name="listItem_margin_vertical">8dp</dimen>
-	<dimen name="image_listItem_width">96dp</dimen>
-	<dimen name="image_listItem_height">96dp</dimen>
-	<dimen name="clickable_row_height">56</dimen>
-	<dimen name="search_result_image_padding">8</dimen>
+	<dimen name="listItem_image_width">96dp</dimen>
+	<dimen name="listItem_image_height">96dp</dimen>
+	<dimen name="listItem_image_padding">8</dimen>
+
 </resources>

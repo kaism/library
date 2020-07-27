@@ -1,11 +1,11 @@
-package com.kaism.books.ui.list;
+package com.kaism.books.ui.library;
 
-public class ListItem {
+public class LibraryItem {
 	private String title;
 	private String description;
 	private String imageUrl;
 
-	public ListItem(String title, String description, String imageUrl) {
+	public LibraryItem(String title, String description, String imageUrl) {
 		this.title = title;
 		this.description = description;
 		this.imageUrl = imageUrl;

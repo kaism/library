@@ -1,4 +1,4 @@
-package com.kaism.books.ui.list;
+package com.kaism.books.ui.library;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,10 +21,10 @@ import java.util.List;
 /***
  * Adapter class for RecyclerView, contains list item data
  */
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHolder> {
 
     // Member variables
-	private List<ListItem> listItems;
+	private List<LibraryItem> listItems;
 	private Context context;
 
     /**
@@ -32,7 +32,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
      * @param listItems List containing the data
      * @param context Context of the application
      */
-    public ListAdapter(List<ListItem> listItems, Context context) {
+    public LibraryAdapter(List<LibraryItem> listItems, Context context) {
 		this.listItems = listItems;
 		this.context = context;
 	}
@@ -46,7 +46,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
      */
     @NonNull
 	@Override
-	public ListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+	public LibraryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 		return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.list_item, parent, false));
 	}
 
@@ -56,9 +56,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
      * @param position The adapter position
      */
     @Override
-	public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, int position) {
+	public void onBindViewHolder(@NonNull LibraryAdapter.ViewHolder holder, int position) {
     	// get current item
-		final ListItem currentItem = listItems.get(position);
+		final LibraryItem currentItem = listItems.get(position);
 
 		// populate the views with data & image
         holder.bindTo(currentItem);
@@ -106,7 +106,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 		 */
 		@Override
 		public void onClick(View v) {
-			ListItem currentItem = listItems.get(getAdapterPosition());
+			LibraryItem currentItem = listItems.get(getAdapterPosition());
 			Intent detailIntent = new Intent(context, DetailActivity.class);
 			detailIntent.putExtra("title", currentItem.getTitle());
 			detailIntent.putExtra("image", currentItem.getImageUrl());
@@ -118,7 +118,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 		 * Method that populates the views with the data
 		 * @param currentItem current ListItem of the data set.
 		 */
-		void bindTo(ListItem currentItem) {
+		void bindTo(LibraryItem currentItem) {
 			// populate the views with data
 			titleView.setText(currentItem.getTitle());
 			descriptionView.setText(currentItem.getDescription());

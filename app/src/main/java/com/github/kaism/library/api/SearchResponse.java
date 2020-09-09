@@ -1,4 +1,4 @@
-package com.kaism.books.api;
+package com.github.kaism.library.api;
 
 import com.google.gson.annotations.SerializedName;
 

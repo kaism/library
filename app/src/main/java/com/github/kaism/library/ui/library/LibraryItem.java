@@ -1,4 +1,4 @@
-package com.kaism.books.ui.library;
+package com.github.kaism.library.ui.library;
 
 public class LibraryItem {
 	private String title;

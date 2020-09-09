@@ -1,4 +1,4 @@
-package com.kaism.books.ui.library;
+package com.github.kaism.library.ui.library;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.kaism.books.DetailActivity;
-import com.kaism.books.R;
+import com.github.kaism.library.DetailActivity;
+import com.github.kaism.library.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.kaism.books.ui.explore;
+package com.github.kaism.library.ui.explore;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;

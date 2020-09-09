@@ -1,4 +1,4 @@
-package com.kaism.books.ui.explore;
+package com.github.kaism.library.ui.explore;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,12 +16,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.kaism.books.BuildConfig;
-import com.kaism.books.R;
-import com.kaism.books.api.ApiClient;
-import com.kaism.books.api.ApiInterface;
-import com.kaism.books.api.Item;
-import com.kaism.books.api.SearchResponse;
+import com.github.kaism.library.BuildConfig;
+import com.github.kaism.library.R;
+import com.github.kaism.library.api.ApiClient;
+import com.github.kaism.library.api.ApiInterface;
+import com.github.kaism.library.api.Item;
+import com.github.kaism.library.api.SearchResponse;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.UnsupportedEncodingException;

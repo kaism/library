@@ -1,4 +1,4 @@
-package com.kaism.books.db;
+package com.github.kaism.library.db;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

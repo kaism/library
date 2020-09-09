@@ -1,4 +1,4 @@
-package com.kaism.books.ui.library;
+package com.github.kaism.library.ui.library;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.kaism.books.R;
+import com.github.kaism.library.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;

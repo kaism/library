@@ -1,4 +1,4 @@
-package com.kaism.books.db;
+package com.github.kaism.library.db;
 
 import android.app.Application;
 import android.os.AsyncTask;

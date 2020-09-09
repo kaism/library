@@ -7,13 +7,13 @@
 
 	<fragment
 		android:id="@+id/navigation_list"
-		android:name="com.kaism.books.ui.library.LibraryFragment"
+		android:name="com.github.kaism.library.ui.library.LibraryFragment"
 		android:label="@string/title_library"
 		tools:layout="@layout/fragment_library" />
 
 	<fragment
 		android:id="@+id/navigation_explore"
-		android:name="com.kaism.books.ui.explore.ExploreFragment"
+		android:name="com.github.kaism.library.ui.explore.ExploreFragment"
 		android:label="@string/title_explore"
 		tools:layout="@layout/fragment_explore" />
 

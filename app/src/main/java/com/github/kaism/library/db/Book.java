@@ -3,46 +3,44 @@ package com.github.kaism.library.db;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "books")
 public class Book {
 
 	@PrimaryKey(autoGenerate = true) protected int mId;
-	@NonNull @ColumnInfo(name = "title") private String mTitle;
-	@NonNull @ColumnInfo(name = "author") private String mAuthor;
-	@NonNull @ColumnInfo(name = "text") private String mText;
-	@NonNull @ColumnInfo(name = "imageUrl") private String mImageUrl;
+	@NonNull @ColumnInfo(name = "title") private String title;
+	@ColumnInfo(name = "author") private String author;
+	@ColumnInfo(name = "text") private String text;
+	@ColumnInfo(name = "imageUrl") private String imageUrl;
 
-	// create new
-	public Book(@NonNull String title, @NonNull String author, @NonNull String text, @NonNull String imageUrl) {
-		this.mTitle = title;
-		this.mAuthor = author;
-		this.mText = text;
-		this.mImageUrl = imageUrl;
+	public Book(@NonNull String title, String author, String text, String imageUrl) {
+		this.title = title;
+		this.author = author;
+		this.text = text;
+		this.imageUrl = imageUrl;
 	}
 
-	// update
-	@Ignore
-	public Book(int id, @NonNull String title, @NonNull String author, @NonNull String text, @NonNull String imageUrl) {
-		this.mId = id;
-		this.mTitle = title;
-		this.mAuthor = author;
-		this.mText = text;
-		this.mImageUrl = imageUrl;
-	}
-
-	public String getTitle() {
-		return this.mTitle;
+	@NonNull public String getTitle() {
+		return this.title;
 	}
 	public String getAuthor() {
-		return this.mAuthor;
+		return this.author;
 	}
 	public String getText() {
-		return this.mText;
+		return this.text;
 	}
 	public String getImageUrl() {
-		return this.mImageUrl;
+		return this.imageUrl;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public void setText(String text) {
+		this.text = text;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 }

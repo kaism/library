@@ -8,69 +8,72 @@ import java.util.List;
 
 
 public class BookRepository {
-	private BookDao mBookDao;
-	private LiveData<List<Book>> mAllBooks;
+	private BookDao bookDao;
+	private LiveData<List<Book>> allBooks;
 
 	public BookRepository(Application application) {
 		RoomDatabase db = RoomDatabase.getDatabase(application);
-		mBookDao = db.bookDao();
-		mAllBooks = mBookDao.getAllBooks();
+		bookDao = db.getBookDao();
+		allBooks = bookDao.getAllBooks();
 	}
 
 	public LiveData<List<Book>> getAllBooks() {
-		return mAllBooks;
+		return allBooks;
 	}
 
+	// insert
 	public void insert(Book book) {
-		new insertAsyncTask(mBookDao).execute(book);
+		new insertAsyncTask(bookDao).execute(book);
 	}
 
 	private static class insertAsyncTask extends AsyncTask<Book, Void, Void> {
-		private BookDao mAsyncTaskDao;
+		private BookDao asyncTaskDao;
 
 		insertAsyncTask(BookDao dao) {
-			mAsyncTaskDao = dao;
+			asyncTaskDao = dao;
 		}
 
 		@Override
 		protected Void doInBackground(final Book... params) {
-			mAsyncTaskDao.insert(params[0]);
+			asyncTaskDao.insert(params[0]);
 			return null;
 		}
 	}
 
+	// update
 	public void update(Book book) {
-		new updateAsyncTask(mBookDao).execute(book);
+		new updateAsyncTask(bookDao).execute(book);
 	}
 
 	private static class updateAsyncTask extends AsyncTask<Book, Void, Void> {
-		private BookDao mAsyncTaskDao;
+		private BookDao asyncTaskDao;
 
 		updateAsyncTask(BookDao dao) {
-			mAsyncTaskDao = dao;
+			asyncTaskDao = dao;
 		}
 
 		@Override
 		protected Void doInBackground(final Book... params) {
-			mAsyncTaskDao.update(params[0]);
+			asyncTaskDao.update(params[0]);
 			return null;
 		}
 	}
 
+	// delete
 	public void deleteBook(Book book) {
-		new deleteBookAsyncTask(mBookDao).execute(book);
+		new deleteBookAsyncTask(bookDao).execute(book);
 	}
 
 	private static class deleteBookAsyncTask extends AsyncTask<Book, Void, Void> {
-		private BookDao mAsyncTaskDao;
+		private BookDao asyncTaskDao;
 
 		deleteBookAsyncTask(BookDao dao) {
-			mAsyncTaskDao = dao;
+			asyncTaskDao = dao;
 		}
 
 		@Override
 		protected Void doInBackground(final Book... params) {
-			mAsyncTaskDao.deleteBook(params[0]);
+			asyncTaskDao.delete(params[0]);
 			return null;
 		}
 	}

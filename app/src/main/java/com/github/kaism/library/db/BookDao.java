@@ -16,7 +16,10 @@ public interface BookDao {
 	LiveData<List<Book>> getAllBooks();
 
 	@Query("SELECT * from books LIMIT 1")
-	Book[] getAnyBook();
+	List<Book> selectOne();
+
+	@Query("SELECT * from books where title=:title")
+	List<Book> selectByTitle(String title);
 
 	@Insert(onConflict = OnConflictStrategy.IGNORE)
 	void insert(Book book);
@@ -25,5 +28,6 @@ public interface BookDao {
 	void update(Book... book);
 
 	@Delete
-	void deleteBook(Book book);
+	void delete(Book book);
+
 }

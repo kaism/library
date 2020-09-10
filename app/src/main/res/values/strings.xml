@@ -7,4 +7,7 @@
 	<string name="title_activity_scan">ScanActivity</string>
 	<string name="title_activity_detail">Book Details</string>
 	<string name="input_hint_search">e.g. Harry Potter</string>
+	<string name="dialog_button_delete">delete</string>
+	<string name="dialog_button_cancel">cancel</string>
+	<string name="dialog_question_confirm_delete_book">Delete this book?</string>
 </resources>

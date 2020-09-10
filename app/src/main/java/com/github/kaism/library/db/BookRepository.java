@@ -60,7 +60,7 @@ public class BookRepository {
 	}
 
 	// delete
-	public void deleteBook(Book book) {
+	public void delete(Book book) {
 		new deleteBookAsyncTask(bookDao).execute(book);
 	}
 

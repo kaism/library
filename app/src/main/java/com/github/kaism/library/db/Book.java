@@ -11,13 +11,13 @@ public class Book {
 	@PrimaryKey(autoGenerate = true) protected int mId;
 	@NonNull @ColumnInfo(name = "title") private String title;
 	@ColumnInfo(name = "author") private String author;
-	@ColumnInfo(name = "text") private String text;
+	@ColumnInfo(name = "description") private String description;
 	@ColumnInfo(name = "imageUrl") private String imageUrl;
 
-	public Book(@NonNull String title, String author, String text, String imageUrl) {
+	public Book(@NonNull String title, String author, String description, String imageUrl) {
 		this.title = title;
 		this.author = author;
-		this.text = text;
+		this.description = description;
 		this.imageUrl = imageUrl;
 	}
 
@@ -27,8 +27,8 @@ public class Book {
 	public String getAuthor() {
 		return this.author;
 	}
-	public String getText() {
-		return this.text;
+	public String getDescription() {
+		return this.description;
 	}
 	public String getImageUrl() {
 		return this.imageUrl;
@@ -37,8 +37,8 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public void setText(String text) {
-		this.text = text;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;

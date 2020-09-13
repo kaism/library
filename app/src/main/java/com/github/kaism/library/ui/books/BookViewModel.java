@@ -1,4 +1,4 @@
-package com.github.kaism.library.ui;
+package com.github.kaism.library.ui.books;
 
 import android.app.Application;
 
@@ -22,6 +22,10 @@ public class BookViewModel extends AndroidViewModel {
 
 	public LiveData<List<Book>> getBooks() {
 		return books;
+	}
+
+	public Book getBookById(int bookId) {
+		return bookRepository.getBookById(bookId);
 	}
 
 	public void insert(Book book) {

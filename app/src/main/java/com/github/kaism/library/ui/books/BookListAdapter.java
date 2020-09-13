@@ -1,4 +1,4 @@
-package com.github.kaism.library.ui;
+package com.github.kaism.library.ui.books;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,11 +20,9 @@ import java.util.List;
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookViewHolder> {
 	private final LayoutInflater layoutInflater;
 	private List<Book> books;
-	private Context context;
 
     BookListAdapter(Context context) {
 		layoutInflater = LayoutInflater.from(context);
-		this.context = context;
 	}
 
 	@NonNull
@@ -39,7 +37,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
 			Book current = books.get(position);
 			holder.titleView.setText(current.getTitle());
 			holder.descriptionView.setText(current.getDescription());
-			Picasso.get().load(current.getImageUrl()).into(holder.imageView);
+			Picasso.get().load(current.getThumbnail()).into(holder.imageView);
 		}
 	}
 

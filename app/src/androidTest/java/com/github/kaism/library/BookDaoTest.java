@@ -41,7 +41,7 @@ public class BookDaoTest {
 	@Test
 	public void insertBook() {
 		// insert book
-		Book book = new Book(title, null, null, null);
+		Book book = new Book(title, "", "", "");
 		bookDao.insert(book);
 		// verify in db
 		book = bookDao.selectOne().get(0);
@@ -51,7 +51,7 @@ public class BookDaoTest {
 	@Test
 	public void deleteBook() {
 		// insert
-		Book book = new Book(title, null, null, null);
+		Book book = new Book(title, "", "", "");
 		bookDao.insert(book);
 
 		// delete

@@ -8,13 +8,13 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "books")
 public class Book {
 
-	@PrimaryKey(autoGenerate = true) protected int mId;
+	@PrimaryKey(autoGenerate = true) private int bookId;
 	@NonNull @ColumnInfo(name = "title") private String title;
-	@ColumnInfo(name = "author") private String author;
-	@ColumnInfo(name = "description") private String description;
-	@ColumnInfo(name = "imageUrl") private String imageUrl;
+	@NonNull @ColumnInfo(name = "author") private String author;
+	@NonNull @ColumnInfo(name = "description") private String description;
+	@NonNull @ColumnInfo(name = "imageUrl") private String imageUrl;
 
-	public Book(@NonNull String title, String author, String description, String imageUrl) {
+	public Book(@NonNull String title, @NonNull String author, @NonNull String description, @NonNull String imageUrl) {
 		this.title = title;
 		this.author = author;
 		this.description = description;
@@ -24,23 +24,23 @@ public class Book {
 	@NonNull public String getTitle() {
 		return this.title;
 	}
-	public String getAuthor() {
+	@NonNull public String getAuthor() {
 		return this.author;
 	}
-	public String getDescription() {
+	@NonNull public String getDescription() {
 		return this.description;
 	}
-	public String getImageUrl() {
+	@NonNull public String getThumbnail() {
 		return this.imageUrl;
 	}
 
-	public void setAuthor(String author) {
+	public void setAuthor(@NonNull String author) {
 		this.author = author;
 	}
-	public void setDescription(String description) {
+	public void setDescription(@NonNull String description) {
 		this.description = description;
 	}
-	public void setImageUrl(String imageUrl) {
+	public void setImageUrl(@NonNull String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
 }

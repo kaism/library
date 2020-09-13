@@ -1,4 +1,4 @@
-package com.github.kaism.library.ui;
+package com.github.kaism.library.ui.books;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -23,7 +23,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-public class LibraryFragment extends Fragment {
+public class BookListFragment extends Fragment {
 	private BookViewModel bookViewModel;
 	private Context context;
 
@@ -47,22 +47,10 @@ public class LibraryFragment extends Fragment {
 				adapter.setBooks(books);
 				int count = adapter.getItemCount();
 				if (count > 0) {
-//					view.findViewById(R.id.empty_text).setVisibility(View.GONE);
 					Toast.makeText(context, "No books", Toast.LENGTH_SHORT).show();
+				} else {
+					Toast.makeText(context, count+" books", Toast.LENGTH_SHORT).show();
 				}
-				Toast.makeText(context, count+" books", Toast.LENGTH_SHORT).show();
-			}
-		});
-
-		// hide bottom menu on scroll
-		recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-			@Override
-			public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-				FloatingActionButton fab = view.findViewById(R.id.fab);
-				if (dy > 0)
-					fab.hide();
-				else if (dy < 0)
-					fab.show();
 			}
 		});
 
@@ -82,6 +70,18 @@ public class LibraryFragment extends Fragment {
 					}
 				});
 		helper.attachToRecyclerView(recyclerView);
+
+		// hide bottom menu on scroll
+		recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+			@Override
+			public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+				FloatingActionButton fab = view.findViewById(R.id.fab);
+				if (dy > 0)
+					fab.hide();
+				else if (dy < 0)
+					fab.show();
+			}
+		});
 
 		return view;
 	}

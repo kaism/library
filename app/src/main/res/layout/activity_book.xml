@@ -4,10 +4,10 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context=".ui.BookDetailActivity">
+	tools:context=".ui.books.BookDetailActivity">
 
 	<androidx.appcompat.widget.Toolbar
-		android:id="@+id/my_child_toolbar"
+		android:id="@+id/toolbar"
 		android:layout_width="match_parent"
 		android:layout_height="?attr/actionBarSize"
 		android:background="?attr/colorPrimary"
@@ -36,7 +36,7 @@
 					android:id="@+id/list_item_image_detail"
 					android:layout_width="@dimen/listItem_image_width"
 					android:layout_height="@dimen/listItem_image_height"
-					android:src="@drawable/intro_to_algorithms" />
+					android:src="@drawable/exampleBook" />
 
 				<TextView
 					android:id="@+id/list_item_title_detail"
@@ -45,6 +45,7 @@
 					android:fontFamily="sans-serif-condensed-medium"
 					android:text="This is a title"
 					android:textColor="#555555" />
+
 			</LinearLayout>
 
 			<TextView

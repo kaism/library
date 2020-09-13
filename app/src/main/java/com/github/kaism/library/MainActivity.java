@@ -5,40 +5,39 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.github.kaism.library.ui.scan.ScanActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity {
+import com.github.kaism.library.ui.scan.ScanActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-	static final int SCAN_RESULT_REQUEST = 1001;
+public class MainActivity extends AppCompatActivity {
+	private static final int SCAN_ACTIVITY_REQUEST_CODE = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+
+		// set up bottom nav bar
 		BottomNavigationView navView = findViewById(R.id.nav_view);
-		// Passing each menu ID as a set of Ids because each
-		// menu should be considered as top level destinations.
 		AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-				R.id.navigation_list, R.id.navigation_explore)
-				.build();
+				R.id.nav_list,
+				R.id.nav_explore
+		).build();
 		NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 		NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 		NavigationUI.setupWithNavController(navView, navController);
 
-		FloatingActionButton fab = findViewById(R.id.fab);
-		fab.setOnClickListener(new View.OnClickListener() {
+		// handle scan button
+		findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				Intent i = new Intent(getBaseContext(), ScanActivity.class);
-				startActivityForResult(i, SCAN_RESULT_REQUEST);
+				startActivityForResult(i, SCAN_ACTIVITY_REQUEST_CODE);
 			}
 		});
 	}
@@ -46,21 +45,11 @@ public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if (requestCode == SCAN_RESULT_REQUEST) {
+		if (requestCode == SCAN_ACTIVITY_REQUEST_CODE) {
 			if (resultCode == RESULT_OK) {
 				String isbn = data.getStringExtra("isbn");
-				displayToast("ISBN: " + isbn);
+				Toast.makeText(getApplicationContext(), "ISBN: " + isbn, Toast.LENGTH_SHORT).show();
 			}
 		}
-	}
-
-
-	/**
-	 * Displays a Toast with the message.
-	 *
-	 * @param message message to display
-	 */
-	public void displayToast(String message) {
-		Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
 	}
 }

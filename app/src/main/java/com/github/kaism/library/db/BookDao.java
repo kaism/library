@@ -18,8 +18,8 @@ public interface BookDao {
 	@Query("SELECT * from books LIMIT 1")
 	List<Book> selectOne();
 
-	@Query("SELECT * from books where title=:title")
-	List<Book> selectByTitle(String title);
+	@Query("SELECT * from books where bookId=:bookId")
+	List<Book> selectById(int bookId);
 
 	@Insert(onConflict = OnConflictStrategy.IGNORE)
 	void insert(Book book);

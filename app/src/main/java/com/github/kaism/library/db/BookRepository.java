@@ -21,18 +21,19 @@ public class BookRepository {
 		return allBooks;
 	}
 
+	public Book getBookById(int bookId) {
+		return bookDao.selectById(bookId).get(0);
+	}
+
 	// insert
 	public void insert(Book book) {
 		new insertAsyncTask(bookDao).execute(book);
 	}
-
 	private static class insertAsyncTask extends AsyncTask<Book, Void, Void> {
 		private BookDao asyncTaskDao;
-
 		insertAsyncTask(BookDao dao) {
 			asyncTaskDao = dao;
 		}
-
 		@Override
 		protected Void doInBackground(final Book... params) {
 			asyncTaskDao.insert(params[0]);
@@ -44,14 +45,11 @@ public class BookRepository {
 	public void update(Book book) {
 		new updateAsyncTask(bookDao).execute(book);
 	}
-
 	private static class updateAsyncTask extends AsyncTask<Book, Void, Void> {
 		private BookDao asyncTaskDao;
-
 		updateAsyncTask(BookDao dao) {
 			asyncTaskDao = dao;
 		}
-
 		@Override
 		protected Void doInBackground(final Book... params) {
 			asyncTaskDao.update(params[0]);
@@ -63,14 +61,11 @@ public class BookRepository {
 	public void delete(Book book) {
 		new deleteBookAsyncTask(bookDao).execute(book);
 	}
-
 	private static class deleteBookAsyncTask extends AsyncTask<Book, Void, Void> {
 		private BookDao asyncTaskDao;
-
 		deleteBookAsyncTask(BookDao dao) {
 			asyncTaskDao = dao;
 		}
-
 		@Override
 		protected Void doInBackground(final Book... params) {
 			asyncTaskDao.delete(params[0]);
